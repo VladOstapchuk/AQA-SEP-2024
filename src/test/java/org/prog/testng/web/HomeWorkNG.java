@@ -1,4 +1,4 @@
-package org.prog.testng;
+package org.prog.testng.web;
 
 public class HomeWorkNG {
 }

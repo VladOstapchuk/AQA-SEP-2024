@@ -6,11 +6,11 @@
         <!--BeforeClass-->
         <classes>
             <!--BeforeMethod-->
-            <class name="org.prog.testng.MyWebTest"/>
+            <class name="org.prog.testng.web.MyWebTest"/>
             <!--AfterMethod-->
         </classes>
         <!--AfterClass-->
     </test>
     <!--AfterTest-->
 </suite>
-        <!--AfterSuite-->
+<!--AfterSuite-->
