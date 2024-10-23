@@ -1,7 +1,5 @@
 package org.prog.homeworks.session4;
 
-import org.prog.collections.CarOwner;
-
 //Class for Cars - Getter, Setter, Constructor and overrided toString
 public class Car {
     private String brand;

@@ -1,6 +1,6 @@
 package org.prog.homeworks.session3;
 
-import org.prog.inheritance.Car;
+import org.prog.inheritance.DemoCar;
 
 import java.io.IOException;
 
@@ -8,9 +8,9 @@ public class ExceptionsDemo {
 
     public static void main(String[] args) {
         try {
-            Car car1 = new Car();
-            Car car2 = new Car();
-            System.out.println(car1.equals(car2));
+            DemoCar demoCar1 = new DemoCar("a");
+            DemoCar demoCar2 = new DemoCar("a");
+            System.out.println(demoCar1.equals(demoCar2));
         } catch (Exception e) {
             System.out.println("Car must have colors!");
         }
