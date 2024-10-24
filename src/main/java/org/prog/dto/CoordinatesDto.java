@@ -3,13 +3,13 @@ package org.prog.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserDto {
-    private String gender;
-    private String nat;
-    private NameDto name;
-    private LocationDto location;
+@ToString
+public class CoordinatesDto {
+    private double latitude;
+    private double longitude;
 }
