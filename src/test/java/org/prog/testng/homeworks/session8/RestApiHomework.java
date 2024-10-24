@@ -1,4 +1,4 @@
-package org.prog.testng.rest;
+package org.prog.testng.homeworks.session8;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 //TODO: Add location to rest params
 //TODO: Add Location DTO with all sub objects
 //TODO: For each user, print First Name + Last Name + Street Name + building id
-public class RestHomework {
+public class RestApiHomework {
 
     @Test
     public void randomUserTest() {
@@ -30,8 +30,13 @@ public class RestHomework {
         validatableResponse.contentType(ContentType.JSON);
 
         ResultsDto dtoHW = response.body().as(ResultsDto.class);
+
         System.out.println("_______________________________________");
         System.out.println(dtoHW.getResults());
+
+        //output by standart for-each
+        System.out.println("_______________________________________");
+        System.out.println("_______________________________________");
         for (UserDto user : dtoHW.getResults()) {
             System.out.println("UserDTO: " + dtoHW.getResults().indexOf(user));
             System.out.println("First Name: " + user.getName().getFirst()
@@ -40,6 +45,11 @@ public class RestHomework {
                     + "\n" + "Building id: " + user.getLocation().getStreet().getNumber());
             System.out.println("______________________________");
         }
-
+        //output by Stream
+dtoHW.getResults().stream().map(userDto -> userDto.getName().getFirst() + " "
+        + userDto.getName().getLast() + " "
+        + userDto.getLocation().getStreet().getName() + " "
+        + userDto.getLocation().getStreet().getNumber())
+        .forEach(u -> System.out.println(u));
     }
 }
