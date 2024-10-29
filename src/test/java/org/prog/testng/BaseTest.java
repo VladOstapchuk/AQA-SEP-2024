@@ -12,7 +12,7 @@ import java.time.Duration;
 
     public WebDriver driver;
 
-    @BeforeSuite
+     @BeforeSuite
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
         driver = new ChromeDriver(options);

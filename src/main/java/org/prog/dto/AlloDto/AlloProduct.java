@@ -14,4 +14,5 @@ public class AlloProduct {
     private String ProductName;
     private String ActualPrice;
     private String Sku;
+
 }

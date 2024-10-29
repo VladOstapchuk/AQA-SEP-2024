@@ -3,11 +3,16 @@ package org.prog.testng.homeworks.session5;
 import org.openqa.selenium.*;
 import org.prog.BasePage;
 import org.prog.PageObject.AlloStartPage;
+import org.prog.dto.AlloDto.AlloProduct;
 import org.prog.testng.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AlloTestWeb extends BaseTest {
+
 
     private final By CloseAdv = By.xpath("//button[@class=\"close\"]");
     private final By SearchForm = By.xpath("//input[@id = \"search-form__input\"]");
@@ -51,20 +56,6 @@ public class AlloTestWeb extends BaseTest {
         Assert.assertEquals(firstProduct.getText(), expectedName);
         Assert.assertEquals(actualPrice.getText(), expectedPrice);
         Assert.assertEquals(sku.getAttribute("innerHTML"), expectedSKU);
-    }
-
-    @Test
-    public void alloSecondTest(){
-
-        String mainURL = "https://allo.ua/";
-
-        new BasePage(driver).openURL(mainURL);
-        new AlloStartPage(driver)
-                .CloseAdv()
-                .SearchForm("iphone 16")
-                .ClickSubmitButton()
-                .FirstResult()
-                .PrintResult();
     }
 
 
