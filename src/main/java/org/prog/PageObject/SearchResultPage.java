@@ -33,7 +33,7 @@ public class SearchResultPage extends BasePage {
         WebElement sku = driver.findElement(FirsProductSku);
 
         product.setProductName(productName.getText());
-        product.setActualPrice(actualPrice.getText());
+        product.setActualPrice(actualPrice.getText().replace("₴", "").replace(" ", ""));
         product.setSku(sku.getAttribute("innerHTML"));
         alloProductList.add(product);
         return alloProductList;
